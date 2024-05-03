@@ -2,9 +2,14 @@
 
 <p>I love tacos</p>
 
+<%
+  fillings = ["Carnitas", "Al Pastor", "Chicken", "Pescado"]
+%>
+
+<p>We have <%= fillings.count %> tacos:</p>
+
 <ul>
-  <li>Avocado</li>
-  <li>Chicken</li>
-  <li>Carnitas</li>
-  <li>Pescado</li>
+  <% for filling in fillings %>
+    <li><%= filling %></li>
+  <% end %>
 </ul>
